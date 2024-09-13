@@ -21,17 +21,13 @@ app.include_router(woocommerce.router)
 app.include_router(integration.router)
 
 # defining origin for cors
-origins = [
-    "http://localhost:8080", "http://localhost",     
-    "http://127.0.0.1","http://localhost:5173","http://localhost:8081",    
-    # Add other origins if needed
-]
+
 
 
 # CORS middleware configuration
 # app.add_middleware(
 #     CORSMiddleware,
-#     allow_origins=origins,  # Adjust this to specific origins in production
+#     allow_origins=["*"],  # Adjust this to specific origins in production
 #     allow_credentials=True,
 #     allow_methods=["*"],
 #     allow_headers=["*"],
